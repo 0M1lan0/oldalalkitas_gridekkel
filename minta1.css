@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    grid-area: h;
+background-color: #00ff00;
+}
+nav{
+    grid-area: n;
+background-color: #ff0000;
+}
+article{
+    grid-area: ar;
+background-color: #0285ff;
+}
+aside{
+    grid-area: as;
+background-color: #ff02d5;
+}
+section{
+    grid-area: s;
+background-color: #ff7c02;
+}
+main{
+    display: grid;
+    grid-template-columns: 2fr 150px;
+    grid-template-areas: "h h"
+                         "n n"
+                         "s as"
+                         "ar as"
+                         "f f";
+}
+footer{
+    grid-area: f;
+    background-color: #ffb702;
+}
+@media screen and (max-width:600px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "s"
+                             "ar"
+                             "as"
+                             "f";
+    
+    }
+}

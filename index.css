@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    grid-area: h;
+background-color: #00ff00;
+}
+nav{
+    grid-area: n;
+background-color: #ff0000;
+}
+article{
+    grid-area: ar;
+background-color: #0285ff;
+}
+aside{
+    grid-area: as;
+background-color: #ff02d5;
+}
+main{
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-template-areas: "h h h"
+                         "n ar as"
+                         "f f f";
+}
+footer{
+    grid-area: f;
+    background-color: #ffb702;
+}
+@media screen and (max-width:800px) {
+    main{
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "h h "
+                             "n n"
+                             "ar as"
+                             "f f ";
+    
+    }
+}
+@media screen and (max-width:600px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n" 
+                             "ar"
+                             "as"
+                             "f";
+    
+    }
+}
